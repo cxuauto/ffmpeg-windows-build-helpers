@@ -1900,7 +1900,7 @@ build_libx265() {
   fi
   cd $checkout_dir
 
-  local cmake_params="-DENABLE_SHARED=0" # build x265.exe
+  local cmake_params="-DENABLE_SHARED=0 -DENABLE_ALPHA=1" # build x265.exe
 
   # Apply x86 noasm detection fix on newer versions
   if [[ $x265_git_checkout_version != *"3.5"* ]] && [[ $x265_git_checkout_version != *"3.4"* ]] && [[ $x265_git_checkout_version != *"3.3"* ]] && [[ $x265_git_checkout_version != *"3.2"* ]] && [[ $x265_git_checkout_version != *"3.1"* ]]; then
